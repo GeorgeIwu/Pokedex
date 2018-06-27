@@ -14,28 +14,10 @@ const constants = {
     LIST_FILTER: 'LIST_FILTER',
 };
 
-const testdata = [
-  { 
-    name: 'Wasdsit',
-    url: 'https://pokeapi.co/api/v2/pokemon/15/',
-  },
-  { 
-    name: 'owerri',
-    url: 'https://pokeapi.co/api/v2/pokemon/16/',
-  },
-  { 
-    name: 'Aba boys',
-    url: 'https://pokeapi.co/api/v2/pokemon/17/',
-  },
-  { 
-    name: 'Wait',
-    url: 'https://pokeapi.co/api/v2/pokemon/18/',
-  },
-]
 export function getPokemons() {
     return (dispatch) => {
       api.get('/pokemon', '', (data) => {
-        dispatch({ type: constants.LIST_FETCHED, payload: testdata });
+        dispatch({ type: constants.LIST_FETCHED, payload: data.results });
       }, (error) => {
         dispatch({ type: constants.LIST_NOT_FETCHED, payload: error });
       });

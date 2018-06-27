@@ -11,13 +11,6 @@ const constants = {
     POKEMON_NOT_FETCHED: 'POKEMON_NOT_FETCHED',
 };
 
-const testdata = { 
-  name: 'Wasdsit',
-  description: 'Lets N',
-  stats: 'rrr',
-  moves: 'here',
-  url: 'https://pokeapi.co/api/v2/pokemon/15/',
-}
 export function getPokemon({ pathname, mypokemons }) {
   const url = pathname.split('/').splice(0, 3).join('/')
   const currentName =  pathname.split('/').pop()
@@ -27,7 +20,7 @@ export function getPokemon({ pathname, mypokemons }) {
       dispatch({ type: constants.POKEMON_FETCHED, payload: mypokemon });
     } else {
       api.get(url, '', (data) => {
-        dispatch({ type: constants.POKEMON_FETCHED, payload: testdata });
+        dispatch({ type: constants.POKEMON_FETCHED, payload: data });
       }, (error) => {
         dispatch({ type: constants.POKEMON_NOT_FETCHED, payload: error });
       });

@@ -19,7 +19,7 @@ class MyPokemons extends Component {
         </header>
         <ul className="App-intro">
           {
-            mypokemons.map(({ name, url }, index) => 
+            mypokemons.map(({ species: { name, url } }, index) => 
               <PokemonItem 
                 key={index} 
                 name={name} 

@@ -1,18 +1,16 @@
-// import needle from 'needle';
-
-const OPTIONS = { headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' } };
+import axios from 'axios';
 
 export default {
   get: (SUBROUTE, PARAMS, sucessCB, failureCB) => {
-    fetch('/api/v2'+SUBROUTE+PARAMS, OPTIONS)
-    .then(function(response) {
-      console.log('response', response);
+    axios.get('/api/v2'+SUBROUTE+PARAMS)
+    .then(function (response) {
+      console.log('response', response.data);
       sucessCB(response.data);
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.log('error', error);
       failureCB(error);
-    })
+    });  
   },
 };
 
