@@ -6,6 +6,7 @@ const PokemonItem = ({ name, url, onDelete }) => (
     <li >
         <Link to={`/pokemon${url.substr(url.length - 3, 2)}/${name}`}>{name}</Link>
         {onDelete && <button className="Button-special" onClick={onDelete} >Remove from MyPokemons</button>}
+        <br />
     </li>
 );
 

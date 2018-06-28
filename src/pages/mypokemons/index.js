@@ -35,7 +35,6 @@ class MyPokemons extends Component {
 }
 
 const stateToProps = state => ({
-  ...state.mypokemons,
   mypokemons: state.mypokemons.data
 });
 const dispatchToProps = dispatch => ({

@@ -14,11 +14,6 @@
   color: white;
 }
 
-.Button-special {
-  float: right;
-  margin: 4px
-}
-
 .App-title {
   font-size: 1.5em;
 }
@@ -34,6 +29,11 @@
 .Ul-plain {
   list-style-type: none;
   text-align: center;
+}
+
+.Button-special {
+  float: right;
+  margin: 0 4px 0 4px;
 }
 
 @keyframes App-logo-spin {

@@ -14,8 +14,8 @@ class Pokemon extends Component {
   }
 
   render() {
-    const { pokemon: { name, height, weight, stats }, isFavourite, favourite } = this.props
-    const addToFavourite = () => favourite({ data: this.props.pokemon })
+    const { pokemon: { name, height, weight, stats }, isFavourite, makeFavourite } = this.props
+    const addToFavourite = () => makeFavourite({ data: this.props.pokemon })
     return (
       <div className="App">
         <header className="App-header">
@@ -37,14 +37,14 @@ class Pokemon extends Component {
 }
 
 const stateToProps = (state, ownProps) => ({
-  ...state.pokemon,
+  location: ownProps.location,
   pokemon: state.pokemon.data,
   mypokemons: state.mypokemons,
   isFavourite: checkIfFavourite(state, ownProps)
 });
 const dispatchToProps = dispatch => ({
   get: params => getPokemon(params)(dispatch),
-  favourite: params => addToMyPokemons(params)(dispatch),
+  makeFavourite: params => addToMyPokemons(params)(dispatch),
 });
 
 export default connect(

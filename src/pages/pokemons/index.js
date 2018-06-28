@@ -36,7 +36,7 @@ class Pokemons extends Component {
 }
 
 const stateToProps = state => ({
-  ...state.pokemons,
+  filterText: state.pokemons.filterText,
   pokemons: filterPokemons(state)
 });
 const dispatchToProps = dispatch => ({
