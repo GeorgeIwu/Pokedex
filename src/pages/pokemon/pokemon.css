@@ -27,8 +27,13 @@
   font-size: large;
 }
 
+.App-focus {
+  text-align: center;
+}
+
 .Ul-plain {
   list-style-type: none;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

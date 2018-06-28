@@ -25,7 +25,7 @@ class Pokemons extends Component {
           <h1 className="App-title">POKEDEX</h1>
         </header>
         <ul className="Ul-plain">
-        <input value={filterText} onChange={(event) => handleFilterChange(event)} style={{ borderColor: 'grey'}}/>
+        <input className="Input-vivid" value={filterText} onChange={(event) => handleFilterChange(event)} />
         {
           pokemons.map(({ name, url }, index) => <PokemonItem key={index} name={name} url={url} />)
         }

@@ -2,15 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types'
 
 const StatsList = ({ stats }) => (
-    <ul className="Ul-plain">
-        {
-            stats.map(({ base_stat, effort, stat }, index) => 
-                <li key={index}>
-                    <span>Base: {base_stat} Effort: {effort} Type: {stat.name}</span> 
-                </li>
-            )
-        }
-    </ul>
+    <div>
+        <p><strong>Stats</strong></p>
+        <ul className="Ul-plain">
+            {
+                stats.map(({ base_stat, effort, stat }, index) => 
+                    <li key={index}>
+                        <span>Base: {base_stat} Effort: {effort} Type: {stat.name}</span> 
+                    </li>
+                )
+            }
+        </ul>
+    </div>
 );
 
 StatsList.propTypes = {
