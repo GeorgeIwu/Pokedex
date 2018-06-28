@@ -11,6 +11,12 @@ const constants = {
     POKEMON_NOT_FETCHED: 'POKEMON_NOT_FETCHED',
 };
 
+export const checkIfFavourite = (state, ownProps) => {
+  const currentName =  ownProps.location.pathname.split('/').pop()
+  const mypokemon = state.mypokemons.data.filter(({ name }) => name.toString() === currentName.toString())[0]
+  return mypokemon ? true : false
+}
+
 export function getPokemon({ pathname, mypokemons }) {
   const url = pathname.split('/').splice(0, 3).join('/')
   const currentName =  pathname.split('/').pop()

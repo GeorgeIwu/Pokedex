@@ -24,7 +24,7 @@ class Pokemons extends Component {
           <img src={logo} className="App-logo" alt="logo" /><Link to='/mypokemons'>My Pokemons</Link>
           <h1 className="App-title">POKEDEX</h1>
         </header>
-        <ul className="App-intro">
+        <ul className="Ul-plain">
         <input value={filterText} onChange={(event) => handleFilterChange(event)} style={{ borderColor: 'grey'}}/>
         {
           pokemons.map(({ name, url }, index) => <PokemonItem key={index} name={name} url={url} />)

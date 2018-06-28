@@ -14,12 +14,21 @@
   color: white;
 }
 
+.Button-special {
+  float: right;
+  margin: 4px
+}
+
 .App-title {
   font-size: 1.5em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.Ul-plain {
+  list-style-type: none;
 }
 
 @keyframes App-logo-spin {

@@ -17,7 +17,7 @@ class MyPokemons extends Component {
         <Link to='/'>Home</Link><img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">My Pokemons</h1>
         </header>
-        <ul className="App-intro">
+        <ul className="Ul-plain">
           {
             mypokemons.map(({ species: { name, url } }, index) => 
               <PokemonItem 
